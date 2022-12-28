@@ -8,7 +8,7 @@ The actual repository encompasses a testing Case for a data scientist job opport
 
  - The project was designed on Python 3.10.0 and some packages needed may be uncompatible to the later versions.
 
- - The packages needed are on: [requirements.txt](https://github.com/Andrercouto/SeazoneCase/blob/main/requirements.txt).
+ - The necessary packages are on: [requirements.txt](https://github.com/Andrercouto/SeazoneCase/blob/main/requirements.txt).
 
  - The Datasets given on the Case's description were added on: [datasets](https://github.com/Andrercouto/SeazoneCase/tree/main/data). It's relevant to note that while the other files are on *.csv* format, the *Price_AV_Itapema*'s dataset is a compressed file and the reason is that it was too large (4GB) for Github's storage size.
 
@@ -17,3 +17,8 @@ The actual repository encompasses a testing Case for a data scientist job opport
 For running the aplication, the <code>virtualenv</code> library must be correctly installed. If it's not, just run:
 
 <code>pip install virtualenv</code>
+
+Clone the repository and install all the packages necessary:
+
+<code>py -3.10 -m venv my_env
+my_env\scripts\activate</code>
