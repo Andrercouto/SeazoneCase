@@ -21,4 +21,5 @@ For running the aplication, the <code>virtualenv</code> library must be correctl
 Clone the repository and install all the packages necessary:
 
 <code>py -3.10 -m venv my_env
-my_env\scripts\activate</code>
+source my_env\scripts\activate
+pip install -r requirements.txt </code>
