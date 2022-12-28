@@ -14,4 +14,4 @@ The actual repository encompasses a testing Case for a data scientist job opport
 
 ### Installing
 
-For running the aplication, the 	virtualenv library
+For running the aplication, the >	virtualenv library
