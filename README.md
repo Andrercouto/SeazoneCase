@@ -10,4 +10,4 @@ The actual repository encompasses a testing Case for a data scientist job opport
 
  - The packages needed are on: [requirements.txt](https://github.com/Andrercouto/SeazoneCase/blob/main/requirements.txt).
 
- - The Datasets given on the Case's description were added on: [datasets](https://github.com/Andrercouto/SeazoneCase/tree/main/data), it's relevant to observe that while the other files are on *.csv* format, the *Price_AV_Itapema*'s dataset is a zipped archive and the reason is that it was to large (4GB) for Github's repository storage size.
+ - The Datasets given on the Case's description were added on: [datasets](https://github.com/Andrercouto/SeazoneCase/tree/main/data). It's relevant to note that while the other files are on *.csv* format, the *Price_AV_Itapema*'s dataset is a compressed file and the reason is that it was too large (4GB) for Github's storage size.
