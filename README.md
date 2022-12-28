@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 ### Part 1 - Data Wrangling
 
-Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format, ensuring its quality and usefulness.
+Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format, ensuring its quality and usefulness. In order to keep the modeled data a new folder was created.
 
 On the case, for example, four of the five given Datasets were scrapped from *Airbnb*. The first questions would be: 
 
@@ -41,5 +41,5 @@ On the case, for example, four of the five given Datasets were scrapped from *Ai
 
 - *If they are, would be usefull to merge them? In which way?*
 
-The [DataWranglingAirbnb.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/DataWranglingAirbnb.py) (*the script has comments specifying what exactly was done on each line*) found out that **yes** this Datasets are related to the same set of places, so, it could be usefull to join them, and each one of them will need to be treated in a different way in order to *condense* and *merge* them without losing important information. In order to keep the modeled data a new folder was created.
+The [DataWranglingAirbnb.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/DataWranglingAirbnb.py) (*the script has comments specifying what exactly was done on each line*) found out that **yes** this Datasets are related to the same set of places, so, it could be usefull to join them, and each one of them will need to be treated in a different way in order to *condense* and *merge* them without losing important information. 
 
