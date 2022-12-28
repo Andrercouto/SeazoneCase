@@ -41,5 +41,7 @@ On the case, for example, four of the five given Datasets were scrapped from *Ai
 
 - *If they are, would be usefull to merge them? In which way?*
 
-The [DataWranglingAirbnb.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/CheckAirbnbData.py) (*the script has comments specifying what exactly was done on each line*) found out that **yes**, this Datasets are related to the same set of places, so, it could be usefull to join them, and each one of them will need to be treated in a different way in order to *condense* and *merge* them without losing important information. 
+#### Check Airbnb Data
+
+The [CheckAirbnbData.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/CheckAirbnbData.py) (*the script has comments specifying what exactly was done on each line*) found out that **yes**, this Datasets are related to the same set of places, so, it could be usefull to join them, and each one of them will need to be treated in a different way in order to *condense* and *merge* them without losing important information. 
 
