@@ -8,4 +8,6 @@ The actual repository encompasses a testing Case for a data scientist job opport
 
  - The project was designed on Python 3.10.0 and some packages needed may be uncompatible to the later versions.
 
- - The packages needed are on the [requirements.txt](https://github.com/Andrercouto/SeazoneCase/blob/main/requirements.txt).
+ - The packages needed are on: [requirements.txt](https://github.com/Andrercouto/SeazoneCase/blob/main/requirements.txt).
+
+ - The Datasets given on the Case's description were added on: [datasets](https://github.com/Andrercouto/SeazoneCase/tree/main/data), 
