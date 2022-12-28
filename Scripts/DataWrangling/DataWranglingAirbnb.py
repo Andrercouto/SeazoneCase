@@ -26,7 +26,7 @@ df_details_airbnb = pd.read_csv(r'raw_data\Details_Data.csv')
 
 # Checking the loaded DataFrame's columns.
 print(f"Details_Data.csv columns: {df_details_airbnb.columns.values}.")
-
+print('aaa')
 id_details_count = df_details_airbnb['ad_id'].value_counts()
 print(f"Details_Data.csv has: {id_details_count.sum()} registers and {len(id_details_count)} unique ids.")
 
@@ -80,5 +80,3 @@ if (set(df_details_airbnb['ad_id']) == set(df_mesh_airbnb['airbnb_listing_id']))
     print('Price_AV_Itapema.csv and Details_Data.csv has the exact same list of ids.')
 else:
     print('The databases has a different set of ids.')
-
-print('fim')
