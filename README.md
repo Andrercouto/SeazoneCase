@@ -31,5 +31,11 @@ pip install -r requirements.txt
 
 ### Part 1 - Data Wrangling
 
-Once the Repository has it's Databases and the necessary dependences configured the 
+Once the Repository has its Databases and the necessary dependencies configured, a first check of the Data is necessary. 
+
+Four of the five given Datasets were scrapped from *Airbnb*
+
+ - 'Details_Data.csv': describes the place's information;
+
+ - 'Details_Data.csv': describes the place's information;
 
