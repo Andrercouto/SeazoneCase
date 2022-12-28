@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 ### Part 1 - Data Wrangling
 
-Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format, ensuring its quality and usefulness. In order to keep the modeled data a new folder was created.
+Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format, ensuring its quality and usefulness. In order to keep the modeled data a [new folder](https://github.com/Andrercouto/SeazoneCase/tree/main/modeled_data) was created.
 
 On the case, for example, four of the five given Datasets were scrapped from *Airbnb*. The first questions would be: 
 
