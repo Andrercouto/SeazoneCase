@@ -21,9 +21,9 @@ For running the aplication, the <code>virtualenv</code> library must be correctl
 Clone the repository and install all the packages necessary:
 
 ```
-git clone https://github.com/Andrercouto/SeazoneCase.git 
 py -3.10 -m venv my_env 
 source my_env\scripts\activate 
+git clone https://github.com/Andrercouto/SeazoneCase.git 
 pip install -r requirements.txt
 ```
 
@@ -31,11 +31,13 @@ pip install -r requirements.txt
 
 ### Part 1 - Data Wrangling
 
-Once the Repository has its Databases and the necessary dependencies configured, a first check of the Data is necessary. 
+Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format, ensuring its quality and usefulness.
 
-Four of the five given Datasets were scrapped from *Airbnb*
+On the case, for example, four of the five given Datasets were scrapped from *Airbnb*. The first questions would be: 
 
- - 'Details_Data.csv': describes the place's information;
+- *Are these differents datasets corcening the same set of places/appartments?*
 
- - 'Details_Data.csv': describes the place's information;
+- *If they are, would be usefull to merge them? In which way?*
+
+The [DataWranglingAirbnb.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/DataWranglingAirbnb.py) will 
 
