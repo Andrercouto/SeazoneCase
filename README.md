@@ -20,11 +20,9 @@ For running the aplication, the <code>virtualenv</code> library must be correctl
 
 Clone the repository and install all the packages necessary:
 
-<code>
 ```
 git clone https://github.com/Andrercouto/SeazoneCase.git 
 py -3.10 -m venv my_env 
 source my_env\scripts\activate 
 pip install -r requirements.txt
 ```
- </code>
