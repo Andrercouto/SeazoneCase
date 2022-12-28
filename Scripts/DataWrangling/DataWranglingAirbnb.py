@@ -6,7 +6,7 @@ import zipfile_deflate64 as zipfile
 import sys
 
 # Checking 'Price_AV_Itapema.csv'
-tag_hist_path = r"C:\Users\andrr\Desktop\SC\SeazoneCase\data\Price_AV_Itapema.zip"
+tag_hist_path = r"raw_data\Price_AV_Itapema.zip"
 parentZip = zipfile.ZipFile(tag_hist_path, mode="r", compression=zipfile.ZIP_DEFLATED64)
 df_price_airbnb = pd.read_csv(parentZip.open('Price_AV_Itapema.csv', mode="r"))
 
@@ -22,7 +22,7 @@ print(f"Price_AV_Itapema.csv has: {id_price_count.sum()} registers and {len(id_p
 other Airbnb datasets'''
 
 # Checking 'Details_Data.csv'
-df_details_airbnb = pd.read_csv(r'C:\Users\andrr\Desktop\Case\SeazoneCase\data\Details_Data.csv')
+df_details_airbnb = pd.read_csv(r'raw_data\Details_Data.csv')
 
 # Checking the loaded DataFrame's columns.
 print(f"Details_Data.csv columns: {df_details_airbnb.columns.values}.")
@@ -41,7 +41,7 @@ else:
  has a "owner_id" column, that can be related to Hosts_ids_Itapema.csv'''
 
 # Checking 'Details_Data.csv'
-df_hosts_airbnb = pd.read_csv(r'C:\Users\andrr\Desktop\Case\SeazoneCase\data\Hosts_ids_Itapema.csv')
+df_hosts_airbnb = pd.read_csv(r'raw_data\Hosts_ids_Itapema.csv')
 
 # Checking the loaded DataFrame's columns.
 print(f"Hosts_ids_Itapema.csv columns: {df_hosts_airbnb.columns.values}.")
@@ -61,15 +61,24 @@ the hosts on Hosts_ids_Itapema which are not in Details_Data can be desconsidere
 # Checking if all the owners from 'Details_Data.csv' are in 'Hosts_ids_Itapema.csv'
 if ((set(df_hosts_airbnb['host_id']) - set(df_details_airbnb['owner_id'])) == set()) == True:
     print('All the ids from Details_Data.csv are in Hosts_ids_Itapema.csv.')
+else:
+    print('Some hosts from Details_Data.csv are not in Hosts_ids_Itapema.csv.')
     
     
 # Checking 'Mesh_Ids_Data_Itapema.csv'
-df_mesh_airbnb = pd.read_csv(r'C:\Users\andrr\Desktop\Case\SeazoneCase\data\Mesh_Ids_Data_Itapema.csv')
+df_mesh_airbnb = pd.read_csv(r'raw_data\Mesh_Ids_Data_Itapema.csv')
 
 # Checking the loaded DataFrame's columns.
 print(f"Mesh_Ids_Data_Itapema.csv columns: {df_mesh_airbnb.columns.values}.")
 
-''' The Mesh_Ids_Data_Itapema.csv has only the ids and geolocation information.
-Once the Price_AV_Itapema has the most reliable information about latitude and longitude, this Dataset won't be used'''
+
+'''Once the Mesh_Ids_Data_Itapema.csv is the most reliable information about latitude
+and longitude, its set of ids will be compared with the Details_Data.csv ids'''
+
+# Checking if both Datasets are about the same places
+if (set(df_details_airbnb['ad_id']) == set(df_mesh_airbnb['airbnb_listing_id'])) == True:
+    print('Price_AV_Itapema.csv and Details_Data.csv has the exact same list of ids.')
+else:
+    print('The databases has a different set of ids.')
 
 print('fim')
