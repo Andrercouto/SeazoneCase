@@ -6,6 +6,6 @@ The actual repository encompasses a testing Case for a data scientist job opport
 
 ### Basics Dependencies
 
-	- The project was designed on Python 3.10.0 and some packages needed may be uncompatible to the later versions.
+ - The project was designed on Python 3.10.0 and some packages needed may be uncompatible to the later versions.
 
-	- The packages needed are in the requirements.txt file.
+ - The packages needed are in the requirements.txt file.
