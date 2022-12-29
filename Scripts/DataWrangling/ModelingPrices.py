@@ -168,8 +168,8 @@ plt.scatter(df_prices['price'].value_counts().index, df_prices['price'].value_co
 ''' Once the dataset and it's columns are adjusted, the last part of the script
  consists in consolidate the informations on a new dataset (and save it) using the
  'airbnb_listing_id' as the index and containing some relevant paramethers.
- The parameters will be: average price, availability rate (% of availability) and
- total revenue'''
+ The parameters will be: average price, availability rate (% of availability),
+ total revenue and the number of different listing dates'''
  
 # Creating the Modeled DataFrame
 condensed_prices = pd.DataFrame(index = list(df_prices.airbnb_listing_id.unique()))
@@ -182,6 +182,9 @@ condensed_prices['availability_rate'] = (df_prices['airbnb_listing_id'].loc[df_p
 
 # Adding Total Revenue column
 condensed_prices['total_revenue'] = df_prices[['price', 'airbnb_listing_id']].loc[df_prices['available']==False].groupby('airbnb_listing_id')['price'].sum()
+
+# Adding Number of different dates column
+condensed_prices['n_of_diff_dates'] = df_prices['date'].value_counts()
  
 # Saving the modeled file on 'modeled_data' folder
 condensed_prices.to_csv(r'modeled_data\Modeled_Prices_AV_Itapema.csv')
