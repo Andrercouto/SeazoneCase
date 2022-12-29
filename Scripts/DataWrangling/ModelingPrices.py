@@ -184,7 +184,7 @@ condensed_prices['availability_rate'] = (df_prices['airbnb_listing_id'].loc[df_p
 condensed_prices['total_revenue'] = df_prices[['price', 'airbnb_listing_id']].loc[df_prices['available']==False].groupby('airbnb_listing_id')['price'].sum()
  
 # Saving the modeled file on 'modeled_data' folder
-condensed_details.to_csv(r'modeled_data\Modeled_Prices_AV_Itapema.csv')
+condensed_prices.to_csv(r'modeled_data\Modeled_Prices_AV_Itapema.csv')
  
  
  
