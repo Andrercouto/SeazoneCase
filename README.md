@@ -63,7 +63,7 @@ Among the Datasets given, *Price_AV_Itapema.csv* was the biggest one (it even ne
 
 #### Wrangling *Mesh_Ids_Data_Itapema.csv*, *Hosts_ids_Itapema.csv* and joining all Airbnb Data
 
-At this moment, the two most complex datasets (considering the *Airbnb* datasets) were already modeled and ready for being joined. [ModelingVivaRealDatabase.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingVivaRealDatabase.py) script's purpose was treating the other datasets and merging all of them.
+At this moment, the two most complex datasets (considering the *Airbnb* datasets) were already modeled and ready for being joined. [JoiningAirbnbDatabases.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/JoiningAirbnbDatabases.py) script's purpose was treating the other datasets and merging all of them.
 
  - *Mesh_Ids_Data_Itapema.csv* had latitude and longitude information and a 'id' column which was used as a key for joining it.
 
