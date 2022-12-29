@@ -79,6 +79,15 @@ The final file ([Modeled_Airbnb_Data.csv](https://github.com/Andrercouto/Seazone
 
 #### Data Wrangling Final Conclusions
 
+*Now that the Data is properly modeled, what's the conclusion? Did the Data Wrangling processes worth it?*
+
+The [DataWranglingFinalConclusions] describes the files' sizes and shapes. 
+
+Concerning the Airbnb Datasets, the size decreased sensibily (the modeled data has 0,02% of the raw data's size). Instead of 4 datasets - with varioues numbers of registers - now there's just one condensed dataset. Its number of column increased (the original dataset with the largest number of columns has 37 while the modeled has 174) but it's necessary in order to use categorical values on a machine learning model.
+
+The VivaReals Dataset was turned into two separate files, but the modeled's data size represents 26% of the original and its number of columns also increased.
+
+The biggest lose of information is related to the date values on the *Price_AV_Itapema.zip*. The original file has registers from different locations on different dates and for this specific kind of analysis (behaviour of the prices over the time) the modeled data would not be very useful.
 
 
 ### Part 2 - Data Analysis and Business Inteligence
