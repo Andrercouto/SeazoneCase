@@ -53,4 +53,4 @@ The [ModelingDetails.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Sc
 
 #### Wrangling *Price_AV_Itapema.zip*
 
-
+Among the Datasets given, *Price_AV_Itapema.csv* was the biggest one, it even needed to be compressed for decreasing it's size and the [ModelingPricess.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingPrices.py) script's purpose is summarizing a 40 milion registers Database in a modeled format that could be related with the others *Airbnb Datasets*. After excluding *NaN* values on critical columns, treating outliers, and creating usefull metrics a condensed *.csv* [file](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_Prices_Data.csv)) - where each register represents a location - was created and added to the '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
