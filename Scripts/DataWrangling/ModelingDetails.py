@@ -9,7 +9,7 @@ import datetime
 from sklearn.feature_extraction.text import CountVectorizer
 import unidecode
 
-# Loading Price_AV_Itapema.csv dataset.
+# Loading Details_Data.csv dataset.
 df_details = pd.read_csv(
     r'raw_data\Details_Data.csv',
     low_memory=False)
@@ -99,7 +99,7 @@ count_vectorizer =  CountVectorizer(tokenizer=lambda x: x.split(','))
 
 for array_column in df_to_vectorize.columns:
     cv_matrix = count_vectorizer.fit_transform(df_to_vectorize[array_column])
-    df_vectorized = pd.DataFrame(cv_matrix.toarray(), columns=count_vectorizer.get_feature_names_out()).drop('', 1)
+    df_vectorized = pd.DataFrame(cv_matrix.toarray(), columns=count_vectorizer.get_feature_names()).drop('', 1)
     condensed_details = condensed_details.merge(df_vectorized,  how='left', left_index=True, right_index=True)
     
 # Dropping the vectorized columns, 'date' and 'aquisition_date'

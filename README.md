@@ -51,4 +51,6 @@ Once it's noticed that the Airbnb Databases contains information about the same 
 
 The [ModelingDetails.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingDetails.py) script's purpose is on modeling the [Details_Data.csv](https://github.com/Andrercouto/SeazoneCase/blob/main/raw_data/Details_Data.csv) dataset, condensing it in order to keep just one register for each location. The qualitative technique was also treated (*vectorized*), and a modeled dataframe ([Modeled_Details_Data.csv](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_Details_Data.csv)) was added on the '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
 
+#### Wrangling *Price_AV_Itapema.zip*
+
 
