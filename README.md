@@ -37,17 +37,19 @@ pip install -r requirements.txt
 
 ### Part 1 - Data Wrangling
 
-Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format (in this case, specially a format that could fit on a regression machine learning model), ensuring its quality and usefulness. In order to keep the modeled data a [new folder](https://github.com/Andrercouto/SeazoneCase/tree/main/modeled_data) was created.
+Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format (in this specific case, preferably a format that fits into a regression machine learning model), ensuring its quality and usefulness. In order to keep the modeled data a [new folder](https://github.com/Andrercouto/SeazoneCase/tree/main/modeled_data) was created.
 
 Four of the five given Datasets were scrapped from *Airbnb*. The first questions would be: 
 
-- *Are these differents datasets corcening the same set of places/appartments?*
+- *Do these differents datasets represent the same set of places/appartments?*
 
-- *If they are, would be usefull to merge them? In which way?*
+- *If they are, would be usefull - or even possible - to merge them into a condensed dataset, which would contain their most critical information? How could it be done?*
 
 #### Check Airbnb Data
 
-The [CheckAirbnbData.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/CheckAirbnbData.py) script (*which cointains comments specifying more clearly the steps taken on each line*) found out that **yes**, this Datasets are related to the same set of places, so, it could be usefull to join them, and each one of them will need to be treated in a different way in order to *condense* and *merge* them without losing important information. 
+The [CheckAirbnbData.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/CheckAirbnbData.py) script (*which cointains comments specifying more clearly the steps taken on each line*) found out that **yes**, this Datasets are related to the same set of places, so, it could be usefull to join them.
+
+Each one of the datasets will need to be treated in a different way in order to *condense* and *merge* them without losing important information. 
 
 #### Wrangling *Details_Data.csv*
 
