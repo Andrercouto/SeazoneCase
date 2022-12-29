@@ -68,3 +68,8 @@ At this moment, the two most complex datasets (considering the *Airbnb* datasets
  - *Mesh_Ids_Data_Itapema.csv* had latitude and longitude information and a 'id' column which was used as a key for joining it.
 
 - *Hosts_ids_Itapema.csv* contained some relevant information about the location's hosts, and a 'owner_id' column that was used for merging it with modeled dataset *Modeled_Details_Data.csv*, which also has a 'owner_id' column. 
+
+
+#### Wrangling *VivaReal_Itapema.csv*
+
+*VivaReal_Itapema.csv* is the only dataset that is not related with the others. The [ModelingVivaRealDatabase.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingVivaRealDatabase.py) script's purpose was wrangling the file, excluding *NaN* values, treating outliers, inspecting some inconsistent data, vectorizing its categorical columns. Its data concerns location for rent and sale in the way that **two** modeled datasets were created from it ([Modeled_VivaReal_Data_Sale.csv](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_VivaReal_Data_Sale.csv) and [Modeled_VivaReal_Data_Rent.csv](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_VivaReal_Data_Rent.csv)) and added to the '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
