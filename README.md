@@ -1,6 +1,8 @@
 # Case Seazone - Data Scientist
 
-The actual repository encompasses a testing Case for a data scientist job opportunity at Seazone. The Case was designed for testing both the coding skills, logical thinking and analytical capabilities, and it's based on a work done at Seazone, with real data and it's divided in two parts. Its first part consists on treating (wrangling, enriching, modeling) the raw data, while the second part is based on getting insights (using data analytics techniques, regression machine learning models and business intelligence skills) from the modeled data in order to make better strategic decisions and answering the questions made on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf).
+The actual repository encompasses a testing Case for a data scientist job opportunity at Seazone. The Case was designed for testing both the coding skills, logical thinking and analytical capabilities, and it's based on a work done at Seazone, with real data and it's divided in two parts.
+
+The first part consists on treating (wrangling, enriching, modeling) the raw data, while the second part is based on getting insights (using data analytics techniques, regression machine learning models and business intelligence skills) from the modeled data in order to make better strategic decisions and try to find the best solutions for the questions made on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf).
 
 
 
