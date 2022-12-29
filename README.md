@@ -59,11 +59,11 @@ The [ModelingDetails.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Sc
 
 #### Wrangling *Price_AV_Itapema.zip*
 
-Among the Datasets given, *Price_AV_Itapema.csv* was the biggest one (it even needed to be compressed for decreasing its size) and the [ModelingPricess.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingPrices.py) script's purpose was summarizing a 40 milion registers Database in a modeled format that could be related with the others *Airbnb Datasets*. After excluding *NaN* values on critical columns, treating outliers, and creating usefull metrics a condensed *.csv* [file](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_Prices_Data.csv)) - where each register represents a location - was created and added to the '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
+Among the Datasets given, *Price_AV_Itapema.csv* was the biggest one (it even needed to be compressed for decreasing its size) and the [ModelingPrices.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingPrices.py) script's purpose was summarizing a 40 milion registers Database in a modeled format that could be related with the others *Airbnb Datasets*. After excluding *NaN* values on critical columns, treating outliers, and creating usefull metrics a condensed *.csv* [file](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_Prices_Data.csv)) - where each register represents a location - was created and added to the '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
 
-#### Joining Airbnb Data
+#### Wrangling *Mesh_Ids_Data_Itapema.csv*, *Hosts_ids_Itapema.csv* and joining all Airbnb Data
 
-At this moment, the two most complex datasets (considering the *Airbnb* datasets) were already modeled and ready for being joined. [ModelingPricess.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingPrices.py) script's purpose was treating the other datasets and merging all of them.
+At this moment, the two most complex datasets (considering the *Airbnb* datasets) were already modeled and ready for being joined. [ModelingVivaRealDatabase.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingVivaRealDatabase.py) script's purpose was treating the other datasets and merging all of them.
 
  - *Mesh_Ids_Data_Itapema.csv* had latitude and longitude information and a 'id' column which was used as a key for joining it.
 
