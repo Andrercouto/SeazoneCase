@@ -2,7 +2,7 @@
 
 The actual repository encompasses a testing Case for a data scientist job opportunity at Seazone. The Case was designed for testing both the coding skills, logical thinking and analytical capabilities, and it's based on a work done at Seazone, with real data and it's divided in two parts.
 
-The first part consists on treating (wrangling, enriching, modeling) the raw data, while the second part is based on getting insights (using data analytics techniques, regression machine learning models and business intelligence skills) from the modeled data in order to make better strategic decisions and try to find the best solutions for the questions made on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf).
+The first part consists on treating (wrangling, enriching, modeling) the raw data, while the second part is based on getting insights (using data analytics techniques, regression machine learning models and business intelligence skills) from the modeled data in order to make better strategic decisions and try to find solutions for the proposed problems on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf).
 
 
 
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format, ensuring its quality and usefulness. In order to keep the modeled data a [new folder](https://github.com/Andrercouto/SeazoneCase/tree/main/modeled_data) was created.
 
-On the case, for example, four of the five given Datasets were scrapped from *Airbnb*. The first questions would be: 
+Four of the five given Datasets were scrapped from *Airbnb*. The first questions would be: 
 
 - *Are these differents datasets corcening the same set of places/appartments?*
 
