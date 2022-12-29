@@ -43,5 +43,12 @@ On the case, for example, four of the five given Datasets were scrapped from *Ai
 
 #### Check Airbnb Data
 
-The [CheckAirbnbData.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/CheckAirbnbData.py) (*the script has comments specifying what exactly was done on each line*) found out that **yes**, this Datasets are related to the same set of places, so, it could be usefull to join them, and each one of them will need to be treated in a different way in order to *condense* and *merge* them without losing important information. 
+The [CheckAirbnbData.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/CheckAirbnbData.py) script (*which cointains comments specifying more clearly the steps taken on each line*) found out that **yes**, this Datasets are related to the same set of places, so, it could be usefull to join them, and each one of them will need to be treated in a different way in order to *condense* and *merge* them without losing important information. 
+
+#### Wrangling *Details_Data.csv*
+
+Once it's noticed that the Airbnb Databases contains information about the same location, the next steps will be treating them in a way that would be possible to consolidate their information in just **one** Dataset.
+
+The [ModelingDetails.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingDetails.py) script's purpose is on modeling the [Details_Data.csv](https://github.com/Andrercouto/SeazoneCase/blob/main/raw_data/Details_Data.csv) dataset, condensing it in order to keep just one register for each location. The qualitative technique was also treated (*vectorized*). 
+
 
