@@ -69,6 +69,8 @@ At this moment, the two most complex datasets (considering the *Airbnb* datasets
 
 - *Hosts_ids_Itapema.csv* contained some relevant information about the location's hosts, and a 'owner_id' column that was used for merging it with modeled dataset *Modeled_Details_Data.csv*, which also has a 'owner_id' column. 
 
+The final file ([Modeled_Airbnb_Data.csv](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_Airbnb_Data.csv)) was added to '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
+
 
 #### Wrangling *VivaReal_Itapema.csv*
 
