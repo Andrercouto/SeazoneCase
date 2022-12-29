@@ -81,7 +81,7 @@ The final file ([Modeled_Airbnb_Data.csv](https://github.com/Andrercouto/Seazone
 
 *Now that the Data is properly modeled, what's the conclusion? Did the Data Wrangling processes worth it?*
 
-The [DataWranglingFinalConclusions] describes the files' sizes and shapes. 
+The [DataWranglingFinalConclusions](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/DataWranglingFinalConclusions.py) describes the files' sizes and shapes. 
 
 Concerning the Airbnb Datasets, the size decreased sensibily (the modeled data has 0,02% of the raw data's size). Instead of 4 datasets - with varioues numbers of registers - now there's just one condensed dataset. Its number of column increased (the original dataset with the largest number of columns has 37 while the modeled has 174) but it's necessary in order to use categorical values on a machine learning model.
 
