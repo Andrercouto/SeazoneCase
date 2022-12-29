@@ -41,7 +41,7 @@ Once the Repository has its Databases and the necessary dependencies configured,
 
 Four of the five given Datasets were scrapped from *Airbnb*. The first questions would be: 
 
-- *Do these differents datasets represent the same set of places/appartments?*
+- *Do these different datasets represent the same set of places/appartments?*
 
 - *If they are, would be usefull - or even possible - to merge them into a condensed dataset, which would contain their most critical information? How could it be done?*
 
@@ -59,7 +59,7 @@ The [ModelingDetails.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Sc
 
 #### Wrangling *Price_AV_Itapema.zip*
 
-Among the Datasets given, *Price_AV_Itapema.csv* was the biggest one (it even needed to be compressed for decreasing its size) and the [ModelingPrices.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingPrices.py) script's purpose was summarizing a 40 milion registers Database in a modeled format that could be related with the others *Airbnb Datasets*. After excluding *NaN* values on critical columns, treating outliers, and creating usefull metrics a condensed *.csv* [file](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_Prices_Data.csv)) - where each register represents a location - was created and added to the '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
+Among the Datasets given, *Price_AV_Itapema.csv* was the biggest one (it even needed to be compressed for decreasing its size) and the [ModelingPrices.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingPrices.py) script's purpose was summarizing a 40 milion registers Database in a modeled format that could be related with the others *Airbnb Datasets*. After excluding *NaN* values on critical columns, treating outliers, and creating usefull metrics a condensed *.csv* [file](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_Prices_Data.csv) - where each register represents a location - was created and added to the '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
 
 #### Wrangling *Mesh_Ids_Data_Itapema.csv*, *Hosts_ids_Itapema.csv* and joining all Airbnb Data
 
@@ -75,6 +75,10 @@ The final file ([Modeled_Airbnb_Data.csv](https://github.com/Andrercouto/Seazone
 #### Wrangling *VivaReal_Itapema.csv*
 
 *VivaReal_Itapema.csv* is the only dataset that is not related with the others. The [ModelingVivaRealDatabase.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/DataWrangling/ModelingVivaRealDatabase.py) script's purpose was wrangling the file, excluding *NaN* values, treating outliers, inspecting some inconsistent data, vectorizing its categorical columns. Its data concerns location for rent and sale in the way that **two** modeled datasets were created from it ([Modeled_VivaReal_Data_Sale.csv](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_VivaReal_Data_Sale.csv) and [Modeled_VivaReal_Data_Rent.csv](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data/Modeled_VivaReal_Data_Rent.csv)) and added to the '[modeled_data](https://github.com/Andrercouto/SeazoneCase/blob/main/modeled_data)' folder.
+
+
+#### Data Wrangling Final Conclusions
+
 
 
 ### Part 2 - Data Analysis and Business Inteligence
