@@ -9,7 +9,7 @@ import datetime
 import zipfile_deflate64 as zipfile
 
 # Loading Price_AV_Itapema.csv dataset
-tag_hist_path = r"raw_data\SeazoneCase\Data\Price_AV_Itapema.zip"
+tag_hist_path = r"raw_data\Price_AV_Itapema.zip"
 parentZip = zipfile.ZipFile(tag_hist_path, mode="r", compression=zipfile.ZIP_DEFLATED64)
 df_prices =  pd.read_csv(parentZip.open('Price_AV_Itapema.csv', mode="r"))
 
