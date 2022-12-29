@@ -14,8 +14,6 @@ df_details = pd.read_csv(
     r'raw_data\Details_Data.csv',
     low_memory=False)
 
-print('aaaa')
-
 # Inspetcing NaN Values
 df_details.isna().sum()
 
