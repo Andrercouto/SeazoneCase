@@ -4,7 +4,12 @@
 import pandas as pd
 import zipfile_deflate64 as zipfile
 import sys
+import os
 
+# Creating directory
+if not os.path.isdir("modeled_data"):
+    os.makedirs("modeled_data")
+    
 # Checking 'Price_AV_Itapema.csv'
 tag_hist_path = r"raw_data\Price_AV_Itapema.zip"
 parentZip = zipfile.ZipFile(tag_hist_path, mode="r", compression=zipfile.ZIP_DEFLATED64)
