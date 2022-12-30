@@ -39,6 +39,8 @@ pip install -r requirements.txt
 
 Once the Repository has its Databases and the necessary dependencies configured, the first part of the Case can be started. It concerns Data Wrangling, which is process of transforming "Raw Data" into a more appropriate and valuable format (in this specific case, preferably a format that fits into a regression machine learning model), ensuring its quality and usefulness. 
 
+Case is based on data scrapped from *Airbnb* and *VivaReal* sites, and concerns places for rent and/or sale. These places can be apartments or houses that, in order to facilitate the understanding of the report (and the comments present in the codes), will be called **properties**.
+
 Four of the five given Datasets were scrapped from *Airbnb*. The first questions would be: 
 
 - *Do these different datasets represent the same set of places/appartments?*
