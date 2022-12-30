@@ -94,13 +94,13 @@ The biggest lose of information is related to the date values on the *Price_AV_I
 
 ### Part 2 - Data Analysis and Business Inteligence
 
-Once the Data is modeled, the focus is on solving the problems presented on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf).
+Once the Data is modeled, the next step is solving the problems presented on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf). In order to keep the problem's solutions data a [new folder](https://github.com/Andrercouto/SeazoneCase/tree/main/Scripts/ProblemSolving) was created.
 
 #### Problem 1
 
 *What is the best property profile to invest in the city?"*
 
-The resolution, using Modeled_Airbnb_Data.csv is on [code].
+The resolution, using Modeled_Airbnb_Data.csv is contained on  [SolvingFirstProblem.py](https://github.com/Andrercouto/SeazoneCase/blob/main/Scripts/ProblemSolving/SolvingFirstProblem.py).
 
 The first part of the problem is defining the concepts of '*best*' and '*profile*'.  A '*best investiment*' was defined by the average price of the property and its availability rate. The '*profile*' was defined as the property type itself (House/Appartment/Loft/ etc). Seazone is a proptech focused on short-stay vacation homes, properties that usually have more than a week for minimum staying days were desconsidered.
 
