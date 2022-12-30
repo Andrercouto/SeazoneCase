@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.cluster import KMeans
 
 # Loading Modeled_Airbnb_Data.csv
-df_airbnb = pd.read_csv(r'C:\Users\andrr\Desktop\Case\SeazoneCase\modeled_data\Modeled_Airbnb_Data.csv')
+df_airbnb = pd.read_csv(r'modeled_data\Modeled_Airbnb_Data.csv')
 
 ''' As it was already seen, the properties with the type 'Quarto inteiro em pousada' are outliers,
  they'll be excluded.'''
