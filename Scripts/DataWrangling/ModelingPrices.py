@@ -171,7 +171,8 @@ plt.scatter(df_prices['price'].value_counts().index, df_prices['price'].value_co
  The parameters will be: average price, availability rate (this paramether
  assumes that if a property is not available, there's some client using it),
  total revenue (the total revenue it's being calculated as the sum of the prices
- on the days that the property is not available) and the number of different listing dates'''
+ on the days that the property is not available), the mode from the 'minimum_say'
+ column' the number of different listing dates'''
  
 # Creating the Modeled DataFrame
 condensed_prices = pd.DataFrame(index = list(df_prices.airbnb_listing_id.unique()))
@@ -188,6 +189,9 @@ condensed_prices['total_revenue'] = df_prices[['price', 'airbnb_listing_id']].lo
 # Adding Number of different dates column
 condensed_prices['n_of_diff_dates'] = df_prices['airbnb_listing_id'].value_counts()
  
+# Adding Minimum Stay Mode
+condensed_prices['minimum_stay_mode'] = df_prices[['minimum_stay', 'airbnb_listing_id']].groupby('airbnb_listing_id')['minimum_stay'].agg(pd.Series.mode)
+
 # Saving the modeled file on 'modeled_data' folder
 condensed_prices.to_csv(r'modeled_data\Modeled_Prices_AV_Itapema.csv')
  
