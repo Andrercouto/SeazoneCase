@@ -93,3 +93,27 @@ The biggest lose of information is related to the date values on the *Price_AV_I
 
 
 ### Part 2 - Data Analysis and Business Inteligence
+
+Once the Data is modeled, the focus is on solving the problems presented on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf).
+
+#### Problem 1
+
+*What is the best property profile to invest in the city?"*
+
+The resolution, using Modeled_Airbnb_Data.csv is on [code].
+
+The first part of the problem is defining the concepts of '*best*' and '*profile*'.  A the 'best investiments' will be defined by the average price of the property and the availability rate (cause a place being is always available could indicate that the clients have no interest on renting it). The 'profile' was defined as the property type itself (House/Appartment/Loft/ etc).
+
+Considering that Seazone is focused on short-stay vacation homes, properties that usually have more than a week for minimum staying days were be desconsidered.
+
+Some properties considered 'Quarto inteiro em pousada', 'Espaço inteiro: bangalô' and 'Espaço inteiro: vila' are considerably more expensive for renting, and it could be a good investment.
+
+Considering the most commom property types ('Espaço inteiro: apartamento', 'Espaço inteiro: casa', 'Espaço inteiro: condomínio') the availability rate is almost the same (about 65% available) and the average prices of these type of properties are:
+
+ - 'Espaço inteiro: apartamento': R$676/day;
+
+ - 'Espaço inteiro: casa': R$621/day;
+
+ - 'Espaço inteiro: condomínio': R$730/day;
+
+The house caracteristics that increases more the rental price is the number of rooms (bedrooms, bathrooms) and number of guests.
