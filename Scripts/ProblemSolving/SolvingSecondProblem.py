@@ -5,10 +5,6 @@ in the city in terms of revenue"?
 
 # Libraries needed
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 ''' For this, the Modeled_Airbnb_Data.csv will be used.'''
