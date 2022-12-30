@@ -94,7 +94,7 @@ The biggest lose of information is related to the date values on the *Price_AV_I
 
 ### Part 2 - Data Analysis and Business Inteligence
 
-Once the Data is modeled, the next step is solving the problems presented on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf). In order to keep the problem's solutions data a [new folder](https://github.com/Andrercouto/SeazoneCase/tree/main/Scripts/ProblemSolving) was created.
+Once the Data is modeled, the next step is solving the problems presented on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf). In order to keep the problem solutions data a [new folder](https://github.com/Andrercouto/SeazoneCase/tree/main/Scripts/ProblemSolving) was created.
 
 #### Problem 1
 
