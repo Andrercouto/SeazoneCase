@@ -26,7 +26,7 @@ Clone the repository and install all the packages necessary:
 
 ```
 py -3.10 -m venv my_env 
-source my_env\scripts\activate 
+my_env\scripts\activate 
 cd my_env
 git clone https://github.com/Andrercouto/SeazoneCase.git 
 cd SeazoneCase
