@@ -1,4 +1,4 @@
-'''This code's main purpose is model "Details_Data.csv"'''
+'''This code's main purpose is model "Details_Data.csv".'''
 
 # Libraries needed
 import pandas as pd
@@ -18,7 +18,7 @@ df_details = pd.read_csv(
 df_details.isna().sum()
 
 
-'''Some columns are composed mostly by NaN values, other columns wouldn't be usefull'''
+'''Some columns are composed mostly by NaN values, other columns wouldn't be usefull.'''
 
 # Excluding columns
 to_delete_columns = ['url', 'ad_name', 'ad_description', 'space',
@@ -33,7 +33,7 @@ df_details = df_details.drop(to_delete_columns, 1)
 # Inspecting DataFrame
 df_details.info()
 
-''' The id column type is int64. Changing it to a str column is a good practice'''
+''' The id column type is int64. Changing it into a str column is a good practice.'''
 
 # Changing 'ad_id' type
 df_details['ad_id'] = df_details['ad_id'].astype(str)
@@ -42,7 +42,7 @@ df_details['ad_id'] = df_details['ad_id'].astype(str)
 id_details_count = df_details['ad_id'].value_counts()
 print(f"Details_Data.csv has: {id_details_count.sum()} registers and {len(id_details_count)} unique ids.")
 
-'''Its important to check why theres so many registers, once theres only 2311 places'''
+'''Its important to check why theres so many registers, once theres only 2311 properties.'''
 
 # Transforming 'aquisition_date_column' into a datetime 
 df_details['aquisition_date'] = pd.to_datetime(df_details['aquisition_date'])
@@ -50,24 +50,24 @@ df_details['aquisition_date'] = pd.to_datetime(df_details['aquisition_date'])
 # Creating date column
 df_details['date'] = df_details['aquisition_date'].dt.date
 
-# Checking the number of places on different aquisition dates
+# Checking the number of properties on different aquisition dates
 ids_dates = df_details[['date', 'ad_id']].value_counts().to_frame().reset_index()
 
 ids_dates.head(10)
 
-'''Its possible to check that theres some registers from the same place in the same day.
-Could be usefull to see the date variance on the Dataframe'''
+'''Its possible to check that theres some registers from the same property in the same day.
+Could be usefull to see the date variance on the Dataframe.'''
 
 date_variance = (df_details.groupby('ad_id')['aquisition_date'].max() - df_details.groupby('ad_id')['aquisition_date'].min()).max()
 
 print(f'The date variance on the Data Frame is: {date_variance}')
 
-''' Analysing the Dataframe context - which concerns places/appartments for rent -
- theres no need for having more than 1 register per place. Even if some
- small changes may have occurred in the locations, their main characteristics would
+''' Analysing the Dataframe context - which concerns properties for rent -
+ theres no need for having more than 1 register per property. Even if some
+ small changes may have occurred on the properties, their main characteristics would
  be maintained over the time.
  
- A new Dataframe, keeping only the last registers from each location will be created'''
+ A new Dataframe, keeping only the last registers from each property will be created.'''
 
 # Creating the new Dataframe
 df_details = df_details.sort_values(by=['aquisition_date'])
@@ -84,7 +84,7 @@ condensed_details[['house_rules', 'amenities', 'safety_features']].head(5)
 ''' The right way to keep the information contained on these column at the
 Dataframe is vectorizing them. For example: "proibido fumar" is a house rule,
 present in some registers, a new column called "proibido fumar" will be created,
-containing 1 on the registers wich has the rule'''
+containing 1 on the registers wich has the rule.'''
 
 # Replacing unwanted characthers
 df_to_vectorize = condensed_details[['house_rules', 'amenities', 'safety_features']].fillna('')
