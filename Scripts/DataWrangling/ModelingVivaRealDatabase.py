@@ -390,5 +390,5 @@ df_vivareal = df_vivareal.loc[df_vivareal['unit_type']=='APARTMENT'].drop(['unit
  parts (concerning locations for Sale and Rent) and saved on the on 'modeled_data' folder'''
 
 # Saving the modeled file on 'modeled_data' folder
-df_vivareal.loc[df_vivareal['rental_price'].isna()].drop(['rental_price'], 1).to_csv(r'modeled_data\Modeled_VivaReal_Data_Sale.csv')
-df_vivareal.loc[df_vivareal['sale_price'].isna()].drop(['sale_price'], 1).to_csv(r'modeled_data\Modeled_VivaReal_Data_Rent.csv')
+df_vivareal.loc[~df_vivareal['sale_price'].isna()].drop(['rental_price'], 1).to_csv(r'modeled_data\Modeled_VivaReal_Data_Sale.csv')
+df_vivareal.loc[~df_vivareal['rental_price'].isna()].drop(['sale_price'], 1).to_csv(r'modeled_data\Modeled_VivaReal_Data_Rent.csv')
