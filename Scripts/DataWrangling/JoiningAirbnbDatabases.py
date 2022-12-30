@@ -73,11 +73,11 @@ df_airbnb_modeled = df_airbnb_modeled.merge(df_hosts, how='left', left_index=Tru
 # Reindexing the modeled DataFrame
 df_airbnb_modeled = df_airbnb_modeled.set_index('ad_id')
 
-''' At this point all the Airbnb information is condensed on the DataFrame. It's 
- bussiness values (price, revenue, availability), it's features (number of rooms,
- amenities, rules, location type) it's latitude and longitude and some owner's 
- information. Teorically it could be saved on this moment, but there are some proccess
- that will be done in order to facilitate the furter use. For example, there's two columns
+''' At this point all the Airbnb information is condensed on the DataFrame. The properties 
+ bussiness values (price, revenue, availability), its features (number of rooms,
+ amenities, rules, location type), its latitude and longitude and some information
+ about its hosts'. Teorically the Data Wrangling could finish here, but there are some proccess
+ that will be done in order to facilitate the Databases furter use. For example, there's two columns
  called "proibido fumar" and "permitido fumar", they are opposite one of them
  will be dropped. It occurs in more than one case.'''
 
