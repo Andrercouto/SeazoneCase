@@ -22,8 +22,8 @@ print(f'The loaded DataFrame has {df_prices.shape[0]} lines and {df_prices.shape
 # Inspecting Data
 df_prices.info()
 
-'''The Dataframe is really large and, as it was already seen, there's only 2300 
- locations on it. All the registers concerning the same location and date will be dropped.'''
+'''The Dataframe is really large specially considering that there's only 2300 
+ properties on it. All the registers concerning the same property and date will be dropped.'''
  
 # Dropping duplicates
 df_prices = df_prices.loc[df_prices[['date', 'airbnb_listing_id']].drop_duplicates().index]
@@ -31,7 +31,7 @@ df_prices = df_prices.loc[df_prices[['date', 'airbnb_listing_id']].drop_duplicat
 # Checking the transformed DataFrame's size
 print(f'The size of the transformed DataFrame is {sys.getsizeof(df_prices)/10**9}GB.')
 
-'''The size is considerably smaller after removing the duplicates.
+'''The Dataframe's size is considerably smaller after removing the duplicates.
  The id column type is int64 and changing it to str is a good practice.'''
 
 # Changing 'airbnb_listing_id' type
@@ -40,14 +40,14 @@ df_prices['airbnb_listing_id'] = df_prices['airbnb_listing_id'].astype(str)
 # Checking NaN values on columns
 df_prices.isna().sum()
 
-'''Some columns are composed strictly by NaN value. They'll be dropped, such as 
+'''Some columns, which are composed strictly by NaN values, will be dropped, such as 
  other columns that won't be used.'''
  
 # Dropping columns
 df_prices = df_prices.drop(['av_for_checkout', 'index', 'bookable', 'ano', 'mes', 'dia'],
                       axis=1)
 
-'''A few registers has NaN values on "price" - which is the most critical column 
+'''A few registers has NaN values on "price" - the most critical column 
  of the Dataset - and they need to be dropped.'''
  
 # Dropping registers
@@ -66,7 +66,7 @@ else:
 df_prices['price'] = df_prices['price'].astype(int)
 
 '''The columns 'av_for_checkin' and 'available' are both related to the availability
- of the place, so they must be similar. If it's the case the column can be dropped.'''
+ of the property, so they must be similar. If it's the case the column can be dropped.'''
  
 print(f"{(df_prices['av_for_checkin'] == df_prices['available']).sum()/len(df_prices)}% similarity.")
 
@@ -101,7 +101,7 @@ df_prices['price'].describe()
 
 '''A large price variation could be seen by the column's standard deviation.
  If the 'price' is related to 'minimum_stay' this difference is be expected (the 
- price - of the same place - would grow according to the number of staying days).'''
+ price - of the same property - would grow according to the number of staying days).'''
  
 # Checking the correlation
 df_prices['price'].corr(df_prices['minimum_stay'])
@@ -128,16 +128,16 @@ print(f"{len(df_prices.loc[df_prices['price']>max_limit])/len(df_prices)}% are o
 plt.scatter(df_prices['price'].value_counts().index, df_prices['price'].value_counts(), s=.5)
 
 '''It's noticed that are just a few values above 10000, could be useful compare
- these values to other registers from the same place. '''
+ these values to other registers from the same property. '''
  
 # List of price outliers registers
 outliers_index = df_prices[['price', 'airbnb_listing_id']].loc[df_prices['price']>10000].index
 
-# List of all the locations which has price outliers
+# List of all the properties which has price outliers
 ids = df_prices['airbnb_listing_id'].loc[outliers_index].unique()
 
-'''A DataFrame containing the maximum price of the place and the mode (the value
- in a set of the place's prices that appears the most often) will be created in order
+'''A DataFrame containing the maximum price of the property and the mode (the value
+ in a set of the properties' prices that appears the most often) will be created in order
  to investigate these registers.''' 
  
 # Creating DataFrame 
