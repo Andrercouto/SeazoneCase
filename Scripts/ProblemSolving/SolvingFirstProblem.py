@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 ''' The problem apparently is about RENTAL properties. For this, the Modeled_Airbnb_Data.csv will be used.'''
 
 # Loading Modeled_Airbnb_Data.csv
-df_airbnb = pd.read_csv(r'C:\Users\andrr\Desktop\Case\SeazoneCase\modeled_data\Modeled_Airbnb_Data.csv')
+df_airbnb = pd.read_csv(r'modeled_data\Modeled_Airbnb_Data.csv')
 
 ''' Once Seazone is focused on short-stay vacation homes, properties that usually
  have a minimum staying days above a week will be desconsidered.'''
@@ -62,6 +62,7 @@ plt.bar(df_property_type['avg_price'].head(3).index,
         df_property_type['avg_price'].head(3),
         color='lightblue', width=.6, linewidth=.8, edgecolor='black')
 plt.xticks(rotation = 45, size=10)
+plt.show()
 
 
 ''' It's noticed that are some difference among the properties type, but knowing 
@@ -81,6 +82,7 @@ plt.bar(df_property_type['availability_rate'].head(3).index,
         df_property_type['availability_rate'].head(3),
         color='lightblue', width=.6, linewidth=.8, edgecolor='black')
 plt.xticks(rotation = 45, size=10)
+plt.show()
 
 
 ''' As it can be checked, the availability rate of the property types are almost
