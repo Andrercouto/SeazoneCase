@@ -102,18 +102,7 @@ Once the Data is modeled, the focus is on solving the problems presented on the 
 
 The resolution, using Modeled_Airbnb_Data.csv is on [code].
 
-The first part of the problem is defining the concepts of '*best*' and '*profile*'.  A the 'best investiments' will be defined by the average price of the property and the availability rate (cause a place being is always available could indicate that the clients have no interest on renting it). The 'profile' was defined as the property type itself (House/Appartment/Loft/ etc).
+The first part of the problem is defining the concepts of '*best*' and '*profile*'.  A the 'best investiments' will be defined by the average price of the property and the availability rate (cause a place being is always available could indicate that the clients have no interest on renting it). The 'profile' was defined as the property type itself (House/Appartment/Loft/ etc). Considering that Seazone is focused on short-stay vacation homes, properties that usually have more than a week for minimum staying days were desconsidered.
 
-Considering that Seazone is focused on short-stay vacation homes, properties that usually have more than a week for minimum staying days were be desconsidered.
-
-Some properties considered 'Quarto inteiro em pousada', 'Espaço inteiro: bangalô' and 'Espaço inteiro: vila' are considerably more expensive for renting, and it could be a good investment.
-
-Considering the most commom property types ('Espaço inteiro: apartamento', 'Espaço inteiro: casa', 'Espaço inteiro: condomínio') the availability rate is almost the same (about 65% available) and the average prices of these type of properties are:
-
- - 'Espaço inteiro: apartamento': R$676/day;
-
- - 'Espaço inteiro: casa': R$621/day;
-
- - 'Espaço inteiro: condomínio': R$730/day;
-
-The house caracteristics that increases more the rental price is the number of rooms (bedrooms, bathrooms) and number of guests.
+Considering the average price of the properties properties classified 'Quarto inteiro em pousada', 'Espaço inteiro: bangalô' and 'Espaço inteiro: vila' are considerably more expensive for renting, and it could be a good investment. The Random Forest Regression algorithm was applied for the most commom property types ('Espaço inteiro: apartamento', 'Espaço inteiro: casa', 'Espaço inteiro: condomínio') in order to check if the property prices are predictable and see the and which features are
+ more relevant.
