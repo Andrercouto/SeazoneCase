@@ -21,7 +21,7 @@ df_details.isna().sum()
 '''Some columns are composed mostly by NaN values, other columns wouldn't be usefull.'''
 
 # Excluding columns
-to_delete_columns = ['url', 'ad_name', 'ad_description', 'space',
+to_delete_columns = ['url', 'ad_name', 'ad_description', 'space', 'cleaning_fee',
                      'additional_house_rules', 'owner','check_in', 'check_out',
                      'cohosts', 'index', 'response_time_shown', 'response_rate_shown',
                      'guest_satisfaction_overall', 'picture_count', 'min_nights',
