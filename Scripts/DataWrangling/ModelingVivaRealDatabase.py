@@ -21,7 +21,7 @@ df_vivareal = pd.read_csv(
 df_vivareal.info()
 
 '''There are some columns that will not be used. It is important to establish 
-that each register represents a location, represented by listing_id'''
+that each register represents a property, represented by listing_id'''
 
 
 # Separating  columns
@@ -33,22 +33,22 @@ to_delete_columns = ['link_name', 'link_url', 'listing_desc',
 df_vivareal = df_vivareal.drop(to_delete_columns, 1)
 
 
-# Checking the number of locations
+# Checking the number of properties
 df_vivareal['listing_id'].value_counts()
 
-'''The dataset contains 13795 locations, but 17547 registers, the .drop_duplicates()
+'''The dataset contains 13795 properties, but 17547 registers, the .drop_duplicates()
  function excludes any duplicated registers on the dataframe.'''
 
 # Dropping duplicates
 df_vivareal = df_vivareal.drop_duplicates()
 
-# Checking the number of locations
+# Checking the number of properties
 df_vivareal['listing_id'].value_counts()
 
-''' The dataframe still has more records than locations, and its cause must be 
+''' The dataframe still has more records than properties, and its cause must be 
 investigated. For this, all the duplicated id's will be added to a new Dataframe.'''
 
-# Checking which columns has different values for the same location
+# Checking which columns has different values for the same properties
 id_count = df_vivareal['listing_id'].value_counts()
 df_duplicates = df_vivareal.loc[df_vivareal['listing_id'].isin(id_count.loc[id_count>1].index)]
 for id in id_count.loc[id_count>1].index:
@@ -57,7 +57,7 @@ for id in id_count.loc[id_count>1].index:
     print(same_value.loc[same_value==False].index[0])
 
 ''' The duplicates occurs only because different values on the 'business_types'
- column for the same locations.'''
+ column for the same properties.'''
 
 # Checking the different values
 df_duplicates[['listing_id', 'business_types']].sort_values(by=['listing_id'])
@@ -72,7 +72,7 @@ df_vivareal = df_vivareal.loc[df_vivareal['listing_id'].drop_duplicates().index]
 df_vivareal = df_vivareal.reset_index(drop=True)
 
 
-''' Once there's just one line per location on the DataFrame, the columns
+''' Once there's just one line per property on the DataFrame, the columns
  must be checked to see if they need some kind of treatment.'''
 
 # Checking Columns
@@ -280,7 +280,7 @@ df_vivareal['address_neighborhood'].value_counts(dropna=False)
 
 ''' The values are correct now. But the column has some NaN values. Could be
 possible to acquire the neighborhood information by the "listing_title" column, once
-some advertisers specify the locations' neighborhood on it. In order to acquiring 
+some advertisers specify the properties' neighborhood on it. In order to acquiring 
 this data, the title must be treated in the same way as the "address_neighborhood"'''
 
 # Treating 'listing_title'
@@ -327,7 +327,7 @@ df_vivareal['address_neighborhood'].value_counts(dropna=False)
  by 80%). These registers could be a problem for the model and should be excluded from 
  the dataframe. The "listing_title" is also not usefull anymore.
  The best way to add this information on the model is transforming each possible
- value on a binary column itself, where 1 = the place belongs to this neighborhood.'''
+ value on a binary column itself, where 1 = the property belongs to this neighborhood.'''
 
 # Excluding Nan (in this case '') values
 df_vivareal = df_vivareal.loc[df_vivareal['address_neighborhood']!='']
@@ -343,11 +343,11 @@ for neighborhood in df_vivareal['address_neighborhood'].unique():
 # Removing address' columns
 df_vivareal = df_vivareal.drop(['address_neighborhood', 'address_zipcode', 'address_street'], 1)
 
-''' Once the places's neighborhood are correctly added, the amenities also needs
- to be included on the dataframe. The places amenities's are contained on a list
+''' Once the properties' neighborhood are correctly added, the amenities also needs
+ to be included on the dataframe. The properties amenities's are contained on a list
  and in order to quantify them, every possible amenitie will be represented by a
- binary column, where "1" indicates that the place has the amenitie. If the place
- doesn't have it, the value will be "0" '''
+ binary column, where "1" indicates that the properties has the amenitie, otherwise 
+ the value will be "0" '''
 
 # Reidexing Dataframe
 df_vivareal = df_vivareal.reset_index(drop=True)
@@ -375,7 +375,7 @@ df_vivareal['usage_type'].value_counts()/df_vivareal['usage_type'].value_counts(
 
 '''Residential usage represents 99.3% of the registers, the other registers will be exluded'''
 
-# Keeping only the Residential Usage places
+# Keeping only the Residential Usage properties
 df_vivareal = df_vivareal.loc[df_vivareal['usage_type']=='RESIDENTIAL'].drop(['usage_type'], 1)
 
 # Checking other categorical variables
@@ -387,7 +387,7 @@ df_vivareal['unit_type'].value_counts()/df_vivareal['unit_type'].value_counts().
 df_vivareal = df_vivareal.loc[df_vivareal['unit_type']=='APARTMENT'].drop(['unit_type'], 1)
 
 ''' Now that the Dataframe is finally modeled, it will be divided on two separate
- parts (concerning locations for Sale and Rent) and saved on the on 'modeled_data' folder'''
+ parts (concerning properties for Sale and Rent) and saved on the on 'modeled_data' folder'''
 
 # Saving the modeled file on 'modeled_data' folder
 df_vivareal.loc[~df_vivareal['sale_price'].isna()].drop(['rental_price'], 1).to_csv(r'modeled_data\Modeled_VivaReal_Data_Sale.csv')
