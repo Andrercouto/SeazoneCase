@@ -4,6 +4,8 @@ The actual repository encompasses a testing Case for a data scientist job opport
 
 The first part consists on treating (wrangling, enriching, modeling) the raw data, while the second part is based on getting insights (using data analytics techniques, regression machine learning models and business intelligence skills) from the modeled data in order to make better strategic decisions and try to find solutions for the proposed problems on the [case description](https://github.com/Andrercouto/SeazoneCase/blob/main/references/seazone_code_challenge.pdf).
 
+A report covering the problems tackled, the solutions found is [here](https://github.com/Andrercouto/SeazoneCase/blob/main/report/report.pdf) 
+
 
 
 ## Configuring the Environment
