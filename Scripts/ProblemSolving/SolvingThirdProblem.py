@@ -55,7 +55,7 @@ plt.plot(range(1,11), wcss, marker='X', color='black')
 plt.xlabel('N de clusters')  
 plt.ylabel('WCSS') 
 
-''' 5 is the ideal number of clusters.'''
+''' By cheching the WCSS graph is noticed that 5 is the ideal number of clusters.'''
 
 # Applying the K-means algorithm
 kmeans = KMeans(n_clusters = 5, random_state = 0)
