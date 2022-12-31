@@ -1,6 +1,8 @@
 ''' This code aims to answer the following question: "We would like to build a 
 building of 50 apartments in the city, where should we build it and how should the 
-apartments be designed in order to be a great investment?"
+apartments be designed in order to be a great investment? and "How much will be the
+ return on investment of this building in the years 2024, 2025 and 2026?
+"
 
  For solving this problem, the Modeled_Airbnb_Data.csv will be used'''
  
@@ -13,6 +15,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.cluster import KMeans
+import numpy as np
 
 
 # Loading Modeled_Airbnb_Data.csv
@@ -149,5 +152,20 @@ df_feature_importances.mean(1).sort_values(ascending=False).head(10)
 ''' And the conclusion of this problem is similar to the other's, the number of rooms
  are the features that impacts more the properties revenue. Good locations for building 
  would be close to the coordinates  (-27.12172499266571, -48.603734205355465) or
- (-27.129436467728883, -48.60189474962269).'''
+ (-27.129436467728883, -48.60189474962269).
+ 
+ For calculating the return over the year, it will be assumed that a building with the
+ characteristics that increases its revenue will be built'''
+ 
+ 
+# The building would be close to the most valuable clusters centers
+df_building = df_airbnb.loc[df_locations.loc[df_locations['cluster'].isin([3, 4])].index]
 
+# Minimum rooms, guests and beds based on the databases 3 quartile
+for feature in ['number_of_bathrooms', 'number_of_guests', 'number_of_guests', 'number_of_bedrooms']:
+    df_building = df_building.loc[df_building[feature]>=np.percentile(df_airbnb[feature], 50)]
+
+print(df_building['revenue'].mean()*365*50)
+
+''' The revenue over a year, considering that the properties would be available for use
+ or in use would be almost R$13.000.000.'''
