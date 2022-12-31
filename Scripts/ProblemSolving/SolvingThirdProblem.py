@@ -95,7 +95,7 @@ The purpose of applying the model is to check if the total revenue is predictabl
  The test will be repeated 10 times in order to collect more results and if the score
  is greater than 80% it will be added to a DataFrame.'''
  
-df_feature_importances = pd.DataFrame(index = df_airbnb.drop(['total_revenue'], 1).columns, columns = range(0,100))
+df_feature_importances = pd.DataFrame(index = df_airbnb.drop(['total_revenue'], 1).columns, columns = range(0,10))
 
 for i in df_feature_importances.columns:
     # Spliting the test and train data
@@ -117,5 +117,4 @@ df_feature_importances.mean(1).sort_values(ascending=False).head(10)
  for the revenue are related to the number of guests and rooms (bigger number = bigger revenue).
  The 4 paramethers based on it are, by far, the most critical.
  
- The number of dates that the property were on the listings Dataset is also a good predictor,
- so, besides the'''
+ The number of dates that the property were on the listings Dataset is also a good predictor.'''
