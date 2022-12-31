@@ -10,14 +10,12 @@ fonttools==4.38.0
 idna==3.4
 joblib==1.2.0
 Js2Py==0.74
-kiwisolver==1.4.4
 Levenshtein==0.20.9
 libpython==0.2
 matplotlib==3.6.2
 numpy==1.24.1
 packaging==22.0
 pandas==1.5.2
-Pillow==9.3.0
 pipwin==0.5.2
 pycparser==2.21
 pyjsparser==2.7.1
